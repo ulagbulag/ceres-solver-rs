@@ -11,8 +11,8 @@ fn main() {
         cc_build.includes(std::env::split_paths(
             &std::env::var("DEP_CERES_INCLUDE").unwrap(),
         ));
-        println!("cargo:rustc-link-lib=static=glog");
-        println!("cargo:rustc-link-lib=static=ceres");
+        println!("cargo:rustc-link-lib=glog");
+        println!("cargo:rustc-link-lib=ceres");
     }
     #[cfg(not(feature = "source"))]
     {
