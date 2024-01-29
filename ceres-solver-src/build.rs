@@ -40,7 +40,7 @@ fn install_glog(vendor_dir: &Path) -> DstDirs {
     };
     let dst = cmake::Config::new(src_dir)
         .profile("Release")
-        .define("BUILD_SHARED_LIBS", "OFF")
+        .define("BUILD_SHARED_LIBS", "ON")
         .define("WITH_GFLAGS", "OFF")
         .define("WITH_GTEST", "OFF")
         .define("WITH_PKGCONFIG", "OFF")
@@ -82,7 +82,7 @@ fn install_ceres(vendor_dir: &Path) -> DstDirs {
         .define("MINIGLOG", "OFF")
         .define("SCHUR_SPECIALIZATIONS", "OFF")
         // .define("CERES_THREADING_MODEL", "CXX_THREADS") // doesn't have obvious defaults
-        .define("BUILD_SHARED_LIBS", "OFF")
+        .define("BUILD_SHARED_LIBS", "ON")
         .define("EXPORT_BUILD_DIR", "OFF")
         .define("BUILD_BENCHMARKS", "OFF")
         .define("BUILD_DOCUMENTATION", "OFF")
